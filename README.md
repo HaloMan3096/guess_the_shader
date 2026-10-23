@@ -1,18 +1,52 @@
-# React + Vite
+# Guess the Shader
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A web-based guessing game for **Destiny 2** where players test their knowledge of the game's shaders.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Shader Search:** Guess a shader by name using its icon as a clue.
+- **Shader Reveal:** Identify a shader from a blurred image that gradually reveals more detail after incorrect guesses.
+- **Destiny 2 Integration:** Retrieves shader information and icons using the Bungie API.
+- **Multiple Game Modes:** Switch between different shader guessing challenges.
 
-## React Compiler
+## Requirements
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- [Node.js](https://nodejs.org/)
+- A [Bungie.net API key](https://www.bungie.net/en/Application)
 
-## Expanding the Oxlint configuration
+## Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# guess_the_shader
-An app that lets you guess the destiny shader
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/HaloMan3096/guess_the_shader.git
+   cd guess_the_shader
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Create a `.env.local` file in the project root and add your Bungie API key:
+   ```dotenv
+   VITE_BUNGIE_API_KEY=your_bungie_api_key_here
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in the terminal.
+
+## Security
+
+**Do not commit your `.env.local` file or publish your personal API key.** Vite exposes variables prefixed with `VITE_` to browser-side code, so this key is not truly secret when used directly by the frontend.
+
+## Built With
+
+- React
+- Vite
+- JavaScript
+- Bungie API
+
